@@ -1,4 +1,7 @@
 <script setup>
+/* Το component προσπελαύνει το application που επιλέχτηκε και η αποζημίωση καθορίζεται
+   με τον τρόπο που περιγράφεται στο backend. Αφού ολοκληρωθεί ο καθορισμός αποζημίωσης,
+   εμφανίζεται το status του application και το compensation amount. */
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useRemoteData } from '@/composables/useRemoteData.js';
@@ -20,6 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <!--Δημιουργία ενός alert που ενημερώνει τον χρήστη ότι το compensation υπολογίστηκε και ενός κουμπιού για μετάβαση πίσω στο "Applications" view.-->
     <div>
         <div class="alert alert-success" role="alert">
             <h4 class="alert-heading">Success!</h4>

@@ -1,4 +1,5 @@
 <script setup>
+// Το component συνδέεται με το κατάλληλο endpoint και επικοινωνεί με το backend για να παραλάβει τα στοιχεία όλων των χρηστών.
 import { ref, onMounted } from 'vue';
 import { useRemoteData } from '@/composables/useRemoteData.js';
 
@@ -13,6 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <!--Δημιουργία ενός table που περιέχει τα στοιχεία όλων των χρηστών-->
   <div class="bg-body-tertiary">
     <div class="container">
       <div class="row py-4 px-3">

@@ -1,4 +1,5 @@
 <script setup>
+// Το component εμφανίζει το σύνολο των applications του εκάστοτε χρήστη (farmer) αφότου επιστραφούν από το backend.
 import { ref, onMounted } from 'vue';
 import { useRemoteData } from '@/composables/useRemoteData.js';
 import { useApplicationStore } from '@/stores/application.js';
@@ -27,6 +28,8 @@ onMounted(() => {
 </script>
 
 <template>
+    <!--Δημιουργία ενός table που εμφανίζει τα στοιχεία όλων των applications του εκάστοτε farmer
+      και προσφέρει επιλογές για την διαγραφή τους ("DeleteApplication" view) και για την προσθήκη ενός καινούριου ("AddNewApplication" view).-->
   <div class="bg-body-tertiary">
     <div class="container">
       <div class="row py-4 px-3">
